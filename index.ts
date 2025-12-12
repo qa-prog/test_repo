@@ -1,1 +1,5 @@
-export default async () => new Response("Hello from GitHub Edge Function");
+export default async () => {
+  return new Response("Hello from Supabase!");
+};
+
+add data also/
