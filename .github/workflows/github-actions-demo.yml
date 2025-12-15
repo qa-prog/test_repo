@@ -1,1 +1,19 @@
-runs-on: self-hosted
+on:
+  workflow_dispatch:
+
+name: Demo workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  long-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Keep workflow running
+        run: |
+          echo "Workflow started"
+          sleep 600
