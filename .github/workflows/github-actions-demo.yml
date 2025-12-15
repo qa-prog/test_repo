@@ -1,4 +1,10 @@
-- name: 'notify vercel'
-  uses: 'vercel/repository-dispatch/actions/status@v1'
-  with:
-    name: Vercel - test-repo: notify vercel
+jobs:
+  long-running-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Simulate long task
+        run: sleep 600   # 10 minutes
+
